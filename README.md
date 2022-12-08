@@ -27,3 +27,8 @@ The receiver stops automatically after a timeout value that can be set in the ma
 Note: If running a stable workload (zipf or uniform), then the receiver timeout can be reduced to about 50s, since these only issue 10,000 requests in about 40s.
 
 The node logs will be stored in "h1_sent.txt" and "h1_received.txt" files.
+
+Check Performance Parameters: 
+=> To check the throughput per sec at a client node, execute "python3 stats.py <node_name>", eg: "python3 stats.py h1". This program will also output the frequency with which each key was accessed after the thoughput window is closed. This can be used figure out the popular and the unpopular keys.
+
+=> To check the latency of a key execute "python3 stats.py <node_name> <key>", eg: "python3 stats.py h1 1". After the latency window is closed, this program also prints out the details of the responder ID for each time the <key> was requested i.e whether the request was resolved by the server (ID = 11), the switch S2 (ID = 1) or the switch S1 (ID = 0)
