@@ -16,6 +16,7 @@ git clone https://github.com/p4lang/tutorials.git
 
 cd ~
 mv ./netcache ./project/tutorials/exercises
-mv ./simple_switch ./project/tutorials/simple_switch
 
-
+cp -r ~/project/behavioral-model/targets/simple_switch ~/project/tutorials/
+cp ~/project/tutorials/exercises/netcache/sswitch_CLI.py ~/project/tutorials/simple_switch/
+cp ~/project/tutorials/exercises/netcache/runtime_CLI.py ~/project/tutorials/simple_switch/
